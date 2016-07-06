@@ -147,7 +147,7 @@ static NSString* toBase64(NSData* data) {
         CDVPictureOptions* pictureOptions = [CDVPictureOptions createFromTakePictureArguments:command];
         pictureOptions.popoverSupported = [weakSelf popoverSupported];
         pictureOptions.usesGeolocation = [weakSelf usesGeolocation];
-        pictureOptions.cropToSize = NO;
+        pictureOptions.cropToSize = YES;
         
         BOOL hasCamera = [UIImagePickerController isSourceTypeAvailable:pictureOptions.sourceType];
         if (!hasCamera) {
